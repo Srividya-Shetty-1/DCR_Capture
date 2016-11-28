@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+<System Name="DCR">
+ <Field Name="SLNO">
+		<Validate ValCond="Blank" ValCondValue="Input" ValCondMessage="The transaction does not have a unique ID"/>
+		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Incorrect Format SL NO. "/>
+</Field>
+
+    <Field Name="BILLNO">
+		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Invalid Bill Number"/>
+		<Validate ValCond="Length" ValCondValue="7" ValCondMessage="Invalid Bill Number"/>
+	</Field>
+	<Field Name="CHKBNKCODE">
+		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Invalid Bank Code"/>
+		<Validate ValCond="Length" ValCondValue="3" ValCondMessage="Invalid Bank Code"/>
+	</Field>
+	<Field Name="CHKBRNCODE">
+		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Invalid Branch Code"/>
+		<Validate ValCond="Length" ValCondValue="3" ValCondMessage="Invalid Branch Code"/>
+	</Field>
+	<Field Name="CHKNO">
+		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Invalid Cheque Number"/>
+		<Validate ValCond="Length(Max)" ValCondValue="9" ValCondMessage="Invalid Cheque Number"/>
+	</Field>
+	<Field Name="POLNO">
+		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Invalid Policy Number"/>
+		<Validate ValCond="Length" ValCondValue="6" ValCondMessage="Invalid Policy Number"/>
+	</Field>
+	<Field Name="CHKDATE">
+		<Validate ValCond="Date" ValCondValue="input" ValCondMessage="Incorrect Date Format"/>
+	</Field>
+	<Field Name="CURR">
+		<Validate ValCond="Length" ValCondValue="3" ValCondMessage="Invalid data Currency"/>
+	</Field>
+	<Field Name="RECV_AMT">
+		<Validate ValCond="Pos_Num" ValCondValue="" ValCondMessage="Incorrect Cheque/Cash Amount"/>
+		<Validate ValCond="Decimal" ValCondValue="2" ValCondMessage="Incorrect Cheque/Cash Amount"/>
+	</Field>
+	<Field Name="OPT">
+		<Validate ValCond="Fixed Values" ValCondValue="F P N" ValCondMessage="Incorrect Value Full/ Partial Paid"/>
+		<Validate ValCond="Blank" ValCondValue="Input" ValCondMessage="The Full/Partial paid cannot be blank"/>
+	</Field>
+    <Field Name="PAID_AMT"> 
+		<Validate ValCond="Pos_Num" ValCondValue="" ValCondMessage="Incorrect Paid Amount"/>
+		<Validate ValCond="Decimal" ValCondValue="2" ValCondMessage="Incorrect Paid Amount"/>
+	</Field>
+	<Field Name="RECEIPT"> 
+		<Validate ValCond="Fixed Values" ValCondValue="Y N" ValCondMessage="Incorrect Data Receipt"/>
+		<Validate ValCond="Blank" ValCondValue="Input" ValCondMessage="The receipt cannot be blank"/>
+	</Field>
+	<Field Name="REFUND"> 
+		<Validate ValCond="Pos_Num" ValCondValue="" ValCondMessage="Incorrect Refund Amount"/>
+		<Validate ValCond="Decimal" ValCondValue="2" ValCondMessage="Incorrect Refund Amount"/>
+	</Field>
+	<Field Name="FUND"> 
+		<Validate ValCond="Character" ValCondValue="" ValCondMessage="Incorrect Fund Value"/>
+		<Validate ValCond="Fixed Values" ValCondValue="G L" ValCondMessage="Incorrect Fund Value"/>
+	</Field>
+	<Field Name="BNK_ACCNT"> 
+		<Validate ValCond="Fixed Values" ValCondValue="HSBC03 HHC HSC2 CH CU" ValCondMessage="Invalid Bank Account"/>
+	</Field>
+	<Field Name="WRITE_OFF">
+		<Validate ValCond="Decimal" ValCondValue="2" ValCondMessage="Incorrect Write Off Amount"/>
+		<Validate ValCond="Range" ValCondValue="-10:10" ValCondMessage="Incorrect Write Off Amount"/>
+	</Field>
+	
+</System>
+ </Config>
