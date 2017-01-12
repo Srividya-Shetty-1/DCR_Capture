@@ -5,7 +5,6 @@
 		<Validate ValCond="Blank" ValCondValue="Input" ValCondMessage="The transaction does not have a unique ID"/>
 		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Incorrect Format SL NO. "/>
 </Field>
-
     <Field Name="BILLNO">
 		<Validate ValCond="Numeric" ValCondValue="Input" ValCondMessage="Invalid Bill Number"/>
 		<Validate ValCond="Length" ValCondValue="7" ValCondMessage="Invalid Bill Number"/>
@@ -31,6 +30,7 @@
 	</Field>
 	<Field Name="CURR">
 		<Validate ValCond="Length" ValCondValue="3" ValCondMessage="Invalid data Currency"/>
+		<Validate ValCond="Fixed Values" ValCondValue="HKD USD MOP SGD RMB GBP CAD AUD" ValCondMessage="Incorrect Currency"/> 
 	</Field>
 	<Field Name="RECV_AMT">
 		<Validate ValCond="Pos_Num" ValCondValue="" ValCondMessage="Incorrect Cheque/Cash Amount"/>
