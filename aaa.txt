@@ -1,0 +1,77 @@
+Execution Evidence /Cycle 1 /6 th march 
+
+NPI_HK_TC_002_Fail
+NPI_HK_TC_010_Pass
+NPI_HK_TC_056_Pass
+NPI_HK_TC_071_Pending Offline
+NPI_HK_TC_121_Pending Offline
+
+Cycle 2 / 15th March
+ACT_IFR_HK_TC_1782_Pending Offline
+ACT_IFR_HK_TC_1844_Pending Offline
+21st march
+POS_IFR_HK_TC_821_Pending Offline
+OCR(RLS)_MA_TC_030_Pass
+
+
+
+Additional Discount check VD
+
+Glossary ( Generated on reinstatement or rider addition)- refer FS  Contract revision
+TRAD - Appendex J Refer FS of Reillustration 
+COR C1 Letter 
+  check endorsement page 
+       -Name of Rider 
+       -Effective date should be the same as the effective date in rider addition screen
+   Check Provision Page 
+Period A May 8 2017 to May 22 2017 
+Period B May 22 2017 to Jul 1 2017
+Period C After Jul 1
+
+1.	Trigger the printing of Contract version (Policy Spec) and decide whether to print New or Old contract on the basis of DOE  -
+o	If DOE is in period ‘A’ or before then 'OLD' contract.
+o	If DOE is in period ‘B’ or Period C then 'New' contract.
+
+2.	Trigger the printing of Proposal version and decide whether it is New, OLD or Uncertain proposal on the basis of DOA (Date of Application) and proposal completion flag- This has been considered in Table set up.
+o	If DOA is in Before Period ‘A’ then 'OLD' contract. 
+o	If DOA is in Period ‘A’/’B’ then - Here check for proposal completion flag is either 'N'/'I'/'Blank' or P then marked it 'Uncertain' and if it is 'C' mark the proposal version as 'New' . 
+o	If DOA is in Period C then - proposal version will be 'New'.
+
+For Glossary Printing 
+NB Contract Version	Proposal Version	Glossary Required(Y/N)?
+OLD				OLD			N
+OLD				NEW			Y
+OLD				UNCERTAIN		Y
+NEW				OLD			Y
+NEW				NEW			N
+NEW				UNCERTAIN		Y
+
+Every time they do duplicate, reprint policy spec will be generated. 
+
+Correspondence and Screens 
+GN16 cut off date ? 
+Life plans 
+
+New Business 
+Contract Revision (CTR) COR-C1
+Proposal Illustration (NPI) COU-C1
+
+InForce
+AFS (AFS)
+Reillustration (IFR) 
+POlicyLoan (IPL)
+Other Correspondences(OCR)
+
+ODM-C1,STA-C1,ISP-C1,COR-C1,COR-C5,COR-C5
+
+reILLUSTRATION 
+=IF(ISERROR(VLOOKUP(A1, $B$1:$B$1995, 1, 0)), A1 & " NOT FOUND IN COLUMN B", "FOUND IN B")
+
+
+
+
+
+
+
+
+
